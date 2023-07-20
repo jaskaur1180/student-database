@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="images/icon_bird.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+  <title>Student Database</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid navbar-custom">
+        <a class="navbar-brand" href="#https://www.liverpool.ac.uk"><img src="images/logo.svg" alt="University of Liverpool Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Student Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Faculty Database</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Student Database</a>
+            </li>
+          </ul>
+          <form class="d-flex d-none d-lg-flex" role="search">
+            <input class="form-control me-2 nav-search" type="search" placeholder="e.g. Faculty, Undergraduates..." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+            <a class="nav-link sign-out" aria-current="page" href="#">Sign out</a>
+        </div>
+      </div>
+    </nav>
+      <div class="container-title">
+        <h2 class="fs-1 title">Student Data</h2>
+      </div>
+    <div class="container-display-data">
+      <div class="container-fluid container-search">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search for student" aria-label="Search" id="searchItem" onkeyup="tableSearch()">
+        </form>
+      </div>
+      <!-- Table data inserted using JS in script.js -->
+      <table class="table table-striped table-bordered">
+        <tbody id="tableData">
+          <thead>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Title </th>
+            <th>Email</th>
+          </thead>
+        </tbody>
+      </table>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  <script type="module" src="js/script.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>
